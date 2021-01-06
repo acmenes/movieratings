@@ -7,30 +7,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="bootstrap.minty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <title>Movies App</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-success">
+        <i class="fas fa-film"></i>
+        <a href="#" class="navbar-brand">My Favorite Movies</a>
+        <i class="fas fa-film"></i>
+    </nav>
     <div>
-        <h1 class="display-1">My Movies List</h1>
         <br>
-        <div class="container alert alert-success">
-            <form id="movie-form">
-                <div class="form-group">
-                    <p>Movie Name:</p>
-                    <input id="title">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-xl-5 border shadow rounded p-4 mx-3 mx-md-0">
+                <form id="movie-form">
+                    <div class="form-group">
+                        <div class="row">
+                            <h3 class="display-6">Pick Your Movies</h3>
+                            <label for="movie">Movie Name:</label>
+                            <input type="text" class="form-control" placeholder="Movie Name" data-toggle="tooltip"
+                                data-placement="top" title="Add Your Favorite Movie">
+                        </div>
+                    </div>
                     <br>
-                    <p>Rating:</p>
-                    <input type="range" class="form-control-range" min="0" max="10" id="rating">
-                    <br>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </div>
+                    <div class="form group">
+                        <div class="form-group">
+                            <label for="rating">Rating:</label>
+                            <br>
+                            <input type="range" class="form-control-range" min="0" max="10" id="rating">
+                            <br>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+            </div>
             </form>
         </div>
         <br>
-        <div class="list">
-            <h3 class="display-3">My Movies</h3>
-            <ul></ul>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-xl-5 border shadow rounded p-4 mx-3 mx-md-0">
+                <h3 class="display-6">My Movies</h3>
+                <ul class="list-group"></ul>
+            </div>
         </div>
 
     </div>
